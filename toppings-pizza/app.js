@@ -110,3 +110,113 @@ console.log(titulo.style); */
 // texto en el DOM (Atributos del texto)
 // ---------------------------------------------------
 
+/* const enlace = document.getElementsByTagName("a");
+
+// Mostrar atributo
+console.log(enlace[0].getAttribute("href"));
+// Eliminar un atributo
+console.log(enlace[0].removeAttribute("href"));
+// Actualizar un atributo
+console.log(enlace[0].setAttribute("href", "https://www.freecodecamp.org/")); */
+
+
+// Clases
+// ---------------------------------------------------
+
+/* const primerTopping = document.querySelector(".topping");
+
+// Mostrar todas las clases que tiene el elemento
+console.log(primerTopping.classList);
+// Agregar una clase
+primerTopping.classList.add("texto-verde");
+// Verificar si un elemento posee una clase
+console.log(primerTopping.classList.contains("fondo-marron"));
+console.log(primerTopping.classList.contains("fondo-azul"));
+// Eliminar una clase
+primerTopping.classList.remove("topping"); */
+
+
+// Elementos
+// ---------------------------------------------------
+
+/* const listDeToppings = document.getElementById("lista-toppings");
+
+const toppinNuevo = document.createElement("li");
+
+toppinNuevo.classList.add("topping", "fondo-marron");
+toppinNuevo.innerText= "Queso extra";
+
+// Crear un elemento
+listDeToppings.append(toppinNuevo);
+listDeToppings.appendChild(toppinNuevo);
+// Remover un elmento
+toppinNuevo.remove(); */
+
+
+
+
+// --------------------------------------------------- Recorrer el DOM ----------------------------------------------------------------
+
+
+
+
+/* const listDeToppings = document.getElementById("lista-toppings");
+
+// Obteniendo el elemento padre (div)
+console.log(listDeToppings.parentElement);
+console.log(listDeToppings.parentNode);
+// Obteniendo el elemento padre del padre (Body)
+console.log(listDeToppings.parentElement.parentElement);
+// Obteniendo el elemento hijo (li acitunas)
+console.log(listDeToppings.children);
+console.log(listDeToppings.firstChild);
+// Obteniendo el primer elemento hijo (li acitunas)
+console.log(listDeToppings.children[0]);
+console.log(listDeToppings.firstElementChild);
+// Obteniendo el ultimo elemento hijo (li champiñones)
+console.log(listDeToppings.lastElementChild);
+// Obteniendo el elemento hermano (titulo)
+console.log(listDeToppings.previousElementSibling);
+// Obteniendo el proximo elemento hermano (a)
+console.log(listDeToppings.nextElementSibling);
+// Obteniendo el elemento por nodos (#text)
+console.log(listDeToppings.previousSibling);
+console.log(listDeToppings.nextSibling); */
+
+
+
+
+// --------------------------------------------------- Eventos del DOM ----------------------------------------------------------------
+
+
+
+
+// Usando (addEventListener())
+// ---------------------------------------------------
+
+/* const toppingAlbahaca = document.getElementsByClassName("topping"); */
+
+// 1) forma de usar
+/* function mostrarClic (evento) {
+    // console.log("Clic");
+    // console.log(evento);
+    // console.log(evento.target);
+    console.log(evento.target.innerText);
+}
+
+for (const topping of toppingAlbahaca) {
+    console.log(topping);
+    topping.addEventListener("click", mostrarClic);
+} */
+
+
+// 2) forma de usar cuando e suna función corta
+/* for (const topping of toppingAlbahaca) {
+    console.log(topping);
+    topping.addEventListener("click", (evento) => {
+        console.log(evento.target.innerText);
+    });
+} */
+
+
+// toppingAlbahaca.addEventListener("click", mostrarClic);
